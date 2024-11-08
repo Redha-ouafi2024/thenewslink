@@ -213,6 +213,22 @@ NEWS 2022</p>
 
 </div>
 
+             <div class="date-container"style="margin:auto;">
+
+    <div class="date" id="dateDisplay"></div>
+
+
+        <div class="text123"style="margin:auto;color:white;text-align: center; ">AlJazeera English News</div>
+
+        </div>
+
+  <div id="news-container">
+
+        <ul id="news-list"></ul>
+    </div>
+
+
+
 
 </div>
 
@@ -472,9 +488,24 @@ http://thenews.netlify.app
           <script src="toggleIframe-3.js"></script>
            <script src="toggleIframe-4.js"></script>
 
+            <script src="thenews-rss.js"></script>
 
 
 
+
+    <script>
+    function displayDate() {
+        const today = new Date();
+        const day = today.getDate();
+        const month = today.getMonth() + 1; // الأشهر تبدأ من الصفر لذلك نضيف 1
+        const year = today.getFullYear();
+
+        const dateDisplay = document.getElementById("dateDisplay");
+        dateDisplay.innerHTML = ` ${day} / ${month} / ${year}`;
+    }
+
+    displayDate();
+</script>
 
 
 
